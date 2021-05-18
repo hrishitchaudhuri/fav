@@ -1,3 +1,5 @@
+import formula
+
 class KripkeStructure:
     def __init__(self, S, IID, R, L):
         self._states = S
@@ -25,3 +27,18 @@ class KripkeStructure:
             ret_str += "}\n"
             
         return ret_str
+
+    def labelNot(self, prop):
+        for state in self._labelling._states:
+            if prop not in self._labelling._labels[state]:
+                self._labelling.addLabel(state, formula.BooleanFormula.getNot(prop))
+
+    def labelAnd(self, prop1, prop2):
+        for state in self._labelling._states:
+            if prop1 in self._labelling._labels[state] and prop2 in self._labelling._labels[state]:
+                self._labelling.addLabel(state, formula.BooleanFormula.getAnd(prop1, prop2))
+
+    def labelOr(self, prop1, prop2):
+        for state in self._labelling._states:
+            if prop1 in self._labelling._labels[state] or prop2 in self._labelling._labels[state]:
+                self._labelling.addLabel(state, formula.BooleanFormula.getOr(prop1, prop2))

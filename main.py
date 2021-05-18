@@ -33,3 +33,12 @@ if __name__=='__main__':
     K = kripke.KripkeStructure(S, 1, R, L)
 
     print(K)
+
+    K.labelNot(p)
+    K.labelNot(q)
+
+    print(K)
+
+    K.labelAnd(p, q)
+
+    print(K)
