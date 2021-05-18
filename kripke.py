@@ -42,3 +42,66 @@ class KripkeStructure:
         for state in self._labelling._states:
             if prop1 in self._labelling._labels[state] or prop2 in self._labelling._labels[state]:
                 self._labelling.addLabel(state, formula.BooleanFormula.getOr(prop1, prop2))
+
+    def labelAX(self, prop):
+        for state in self._labelling._states:
+            check = True
+            for n_state in self._nsr._relations[state]:
+                if prop not in self._labelling._labels[n_state]:
+                    check = False
+            
+            if check:
+                self._labelling.addLabel(state, formula.BooleanFormula.getAX(prop))
+
+    def labelEX(self, prop):
+        for state in self._labelling._states:
+            for n_state in self._nsr._relations[state]:
+                if prop in self._labelling._labels[n_state]:
+                    self._labelling.addLabel(state, formula.BooleanFormula.getEX(prop))
+                    break
+
+    def labelAU(self, prop1, prop2):
+        check = True
+        prop = formula.BooleanFormula.getAU(prop1, prop2)
+        visited_states = []
+
+        while check:
+            check = False
+            for state in self._labelling._states:
+                if state not in visited_states:
+                    if prop2 in self._labelling._labels[state]:
+                        self._labelling.addLabel(state, prop)
+                        check = True
+                        visited_states.append(state)
+
+                    if prop1 in self._labelling._labels[state]:
+                        n_check = True
+                        for n_state in self._nsr._relations[state]:
+                            if prop not in self._labelling._labels[n_state]:
+                                n_check = False
+                    
+                        if n_check:
+                            self._labelling.addLabel(state, prop)
+                            check = True
+                            visited_states.append(state)
+
+    def labelEU(self, prop1, prop2):
+        check = True
+        prop = formula.BooleanFormula.getEU(prop1, prop2)
+        visited_states = []
+
+        while check:
+            check = False
+            for state in self._labelling._states:
+                if state not in visited_states:
+                    if prop2 in self._labelling._labels[state]:
+                        self._labelling.addLabel(state, prop)
+                        check = True
+                        visited_states.append(state)
+                
+                    if prop1 in self._labelling._labels[state]:
+                        for n_state in self._nsr._relations[state]:
+                            if prop in self._labelling._labels[n_state]:
+                                self._labelling.addLabel(state, prop)
+                                check = True
+                                visited_states.append(state)

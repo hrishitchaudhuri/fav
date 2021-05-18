@@ -22,8 +22,8 @@ if __name__=='__main__':
 
     L = labels.Labelling()
 
-    p = formula.Proposition('p', True, True)
-    q = formula.Proposition('q', True, True)
+    p = formula.Proposition('p', True)
+    q = formula.Proposition('q', True)
 
     L.addLabel(s1, p)
     L.addLabel(s1, q)
@@ -34,9 +34,12 @@ if __name__=='__main__':
 
     print(K)
 
+    """
     K.labelNot(p)
     K.labelNot(q)
+    """
 
+    K.labelEU(p, q)
     print(K)
 
     K.labelAnd(p, q)
