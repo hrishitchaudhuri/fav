@@ -56,6 +56,7 @@ def t_error(t):
 
 lexer = lex.lex()
 
+"""
 data = "AX (!p * (q + r))"
 lexer.input(data)
 
@@ -64,3 +65,4 @@ while True:
     if not tok:
         break
     print(tok)
+"""

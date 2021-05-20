@@ -1,0 +1,423 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> bool_form
+Rule 1     bool_form -> NOT bool_form
+Rule 2     bool_form -> bool_form AND bool_form
+Rule 3     bool_form -> bool_form OR bool_form
+Rule 4     bool_form -> AX bool_form
+Rule 5     bool_form -> EX bool_form
+Rule 6     bool_form -> bool_form AU bool_form
+Rule 7     bool_form -> bool_form EU bool_form
+Rule 8     bool_form -> LPAREN bool_form RPAREN
+Rule 9     bool_form -> PROPOSITION
+
+Terminals, with rules where they appear
+
+AND                  : 2
+AU                   : 6
+AX                   : 4
+EU                   : 7
+EX                   : 5
+LPAREN               : 8
+NOT                  : 1
+OR                   : 3
+PROPOSITION          : 9
+RPAREN               : 8
+error                : 
+
+Nonterminals, with rules where they appear
+
+bool_form            : 1 2 2 3 3 4 5 6 6 7 7 8 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . bool_form
+    (1) bool_form -> . NOT bool_form
+    (2) bool_form -> . bool_form AND bool_form
+    (3) bool_form -> . bool_form OR bool_form
+    (4) bool_form -> . AX bool_form
+    (5) bool_form -> . EX bool_form
+    (6) bool_form -> . bool_form AU bool_form
+    (7) bool_form -> . bool_form EU bool_form
+    (8) bool_form -> . LPAREN bool_form RPAREN
+    (9) bool_form -> . PROPOSITION
+
+    NOT             shift and go to state 2
+    AX              shift and go to state 3
+    EX              shift and go to state 4
+    LPAREN          shift and go to state 5
+    PROPOSITION     shift and go to state 6
+
+    bool_form                      shift and go to state 1
+
+state 1
+
+    (0) S' -> bool_form .
+    (2) bool_form -> bool_form . AND bool_form
+    (3) bool_form -> bool_form . OR bool_form
+    (6) bool_form -> bool_form . AU bool_form
+    (7) bool_form -> bool_form . EU bool_form
+
+    AND             shift and go to state 7
+    OR              shift and go to state 8
+    AU              shift and go to state 9
+    EU              shift and go to state 10
+
+
+state 2
+
+    (1) bool_form -> NOT . bool_form
+    (1) bool_form -> . NOT bool_form
+    (2) bool_form -> . bool_form AND bool_form
+    (3) bool_form -> . bool_form OR bool_form
+    (4) bool_form -> . AX bool_form
+    (5) bool_form -> . EX bool_form
+    (6) bool_form -> . bool_form AU bool_form
+    (7) bool_form -> . bool_form EU bool_form
+    (8) bool_form -> . LPAREN bool_form RPAREN
+    (9) bool_form -> . PROPOSITION
+
+    NOT             shift and go to state 2
+    AX              shift and go to state 3
+    EX              shift and go to state 4
+    LPAREN          shift and go to state 5
+    PROPOSITION     shift and go to state 6
+
+    bool_form                      shift and go to state 11
+
+state 3
+
+    (4) bool_form -> AX . bool_form
+    (1) bool_form -> . NOT bool_form
+    (2) bool_form -> . bool_form AND bool_form
+    (3) bool_form -> . bool_form OR bool_form
+    (4) bool_form -> . AX bool_form
+    (5) bool_form -> . EX bool_form
+    (6) bool_form -> . bool_form AU bool_form
+    (7) bool_form -> . bool_form EU bool_form
+    (8) bool_form -> . LPAREN bool_form RPAREN
+    (9) bool_form -> . PROPOSITION
+
+    NOT             shift and go to state 2
+    AX              shift and go to state 3
+    EX              shift and go to state 4
+    LPAREN          shift and go to state 5
+    PROPOSITION     shift and go to state 6
+
+    bool_form                      shift and go to state 12
+
+state 4
+
+    (5) bool_form -> EX . bool_form
+    (1) bool_form -> . NOT bool_form
+    (2) bool_form -> . bool_form AND bool_form
+    (3) bool_form -> . bool_form OR bool_form
+    (4) bool_form -> . AX bool_form
+    (5) bool_form -> . EX bool_form
+    (6) bool_form -> . bool_form AU bool_form
+    (7) bool_form -> . bool_form EU bool_form
+    (8) bool_form -> . LPAREN bool_form RPAREN
+    (9) bool_form -> . PROPOSITION
+
+    NOT             shift and go to state 2
+    AX              shift and go to state 3
+    EX              shift and go to state 4
+    LPAREN          shift and go to state 5
+    PROPOSITION     shift and go to state 6
+
+    bool_form                      shift and go to state 13
+
+state 5
+
+    (8) bool_form -> LPAREN . bool_form RPAREN
+    (1) bool_form -> . NOT bool_form
+    (2) bool_form -> . bool_form AND bool_form
+    (3) bool_form -> . bool_form OR bool_form
+    (4) bool_form -> . AX bool_form
+    (5) bool_form -> . EX bool_form
+    (6) bool_form -> . bool_form AU bool_form
+    (7) bool_form -> . bool_form EU bool_form
+    (8) bool_form -> . LPAREN bool_form RPAREN
+    (9) bool_form -> . PROPOSITION
+
+    NOT             shift and go to state 2
+    AX              shift and go to state 3
+    EX              shift and go to state 4
+    LPAREN          shift and go to state 5
+    PROPOSITION     shift and go to state 6
+
+    bool_form                      shift and go to state 14
+
+state 6
+
+    (9) bool_form -> PROPOSITION .
+
+    AND             reduce using rule 9 (bool_form -> PROPOSITION .)
+    OR              reduce using rule 9 (bool_form -> PROPOSITION .)
+    AU              reduce using rule 9 (bool_form -> PROPOSITION .)
+    EU              reduce using rule 9 (bool_form -> PROPOSITION .)
+    $end            reduce using rule 9 (bool_form -> PROPOSITION .)
+    RPAREN          reduce using rule 9 (bool_form -> PROPOSITION .)
+
+
+state 7
+
+    (2) bool_form -> bool_form AND . bool_form
+    (1) bool_form -> . NOT bool_form
+    (2) bool_form -> . bool_form AND bool_form
+    (3) bool_form -> . bool_form OR bool_form
+    (4) bool_form -> . AX bool_form
+    (5) bool_form -> . EX bool_form
+    (6) bool_form -> . bool_form AU bool_form
+    (7) bool_form -> . bool_form EU bool_form
+    (8) bool_form -> . LPAREN bool_form RPAREN
+    (9) bool_form -> . PROPOSITION
+
+    NOT             shift and go to state 2
+    AX              shift and go to state 3
+    EX              shift and go to state 4
+    LPAREN          shift and go to state 5
+    PROPOSITION     shift and go to state 6
+
+    bool_form                      shift and go to state 15
+
+state 8
+
+    (3) bool_form -> bool_form OR . bool_form
+    (1) bool_form -> . NOT bool_form
+    (2) bool_form -> . bool_form AND bool_form
+    (3) bool_form -> . bool_form OR bool_form
+    (4) bool_form -> . AX bool_form
+    (5) bool_form -> . EX bool_form
+    (6) bool_form -> . bool_form AU bool_form
+    (7) bool_form -> . bool_form EU bool_form
+    (8) bool_form -> . LPAREN bool_form RPAREN
+    (9) bool_form -> . PROPOSITION
+
+    NOT             shift and go to state 2
+    AX              shift and go to state 3
+    EX              shift and go to state 4
+    LPAREN          shift and go to state 5
+    PROPOSITION     shift and go to state 6
+
+    bool_form                      shift and go to state 16
+
+state 9
+
+    (6) bool_form -> bool_form AU . bool_form
+    (1) bool_form -> . NOT bool_form
+    (2) bool_form -> . bool_form AND bool_form
+    (3) bool_form -> . bool_form OR bool_form
+    (4) bool_form -> . AX bool_form
+    (5) bool_form -> . EX bool_form
+    (6) bool_form -> . bool_form AU bool_form
+    (7) bool_form -> . bool_form EU bool_form
+    (8) bool_form -> . LPAREN bool_form RPAREN
+    (9) bool_form -> . PROPOSITION
+
+    NOT             shift and go to state 2
+    AX              shift and go to state 3
+    EX              shift and go to state 4
+    LPAREN          shift and go to state 5
+    PROPOSITION     shift and go to state 6
+
+    bool_form                      shift and go to state 17
+
+state 10
+
+    (7) bool_form -> bool_form EU . bool_form
+    (1) bool_form -> . NOT bool_form
+    (2) bool_form -> . bool_form AND bool_form
+    (3) bool_form -> . bool_form OR bool_form
+    (4) bool_form -> . AX bool_form
+    (5) bool_form -> . EX bool_form
+    (6) bool_form -> . bool_form AU bool_form
+    (7) bool_form -> . bool_form EU bool_form
+    (8) bool_form -> . LPAREN bool_form RPAREN
+    (9) bool_form -> . PROPOSITION
+
+    NOT             shift and go to state 2
+    AX              shift and go to state 3
+    EX              shift and go to state 4
+    LPAREN          shift and go to state 5
+    PROPOSITION     shift and go to state 6
+
+    bool_form                      shift and go to state 18
+
+state 11
+
+    (1) bool_form -> NOT bool_form .
+    (2) bool_form -> bool_form . AND bool_form
+    (3) bool_form -> bool_form . OR bool_form
+    (6) bool_form -> bool_form . AU bool_form
+    (7) bool_form -> bool_form . EU bool_form
+
+    AND             reduce using rule 1 (bool_form -> NOT bool_form .)
+    OR              reduce using rule 1 (bool_form -> NOT bool_form .)
+    AU              reduce using rule 1 (bool_form -> NOT bool_form .)
+    EU              reduce using rule 1 (bool_form -> NOT bool_form .)
+    $end            reduce using rule 1 (bool_form -> NOT bool_form .)
+    RPAREN          reduce using rule 1 (bool_form -> NOT bool_form .)
+
+  ! AND             [ shift and go to state 7 ]
+  ! OR              [ shift and go to state 8 ]
+  ! AU              [ shift and go to state 9 ]
+  ! EU              [ shift and go to state 10 ]
+
+
+state 12
+
+    (4) bool_form -> AX bool_form .
+    (2) bool_form -> bool_form . AND bool_form
+    (3) bool_form -> bool_form . OR bool_form
+    (6) bool_form -> bool_form . AU bool_form
+    (7) bool_form -> bool_form . EU bool_form
+
+    AU              reduce using rule 4 (bool_form -> AX bool_form .)
+    EU              reduce using rule 4 (bool_form -> AX bool_form .)
+    $end            reduce using rule 4 (bool_form -> AX bool_form .)
+    RPAREN          reduce using rule 4 (bool_form -> AX bool_form .)
+    AND             shift and go to state 7
+    OR              shift and go to state 8
+
+  ! AND             [ reduce using rule 4 (bool_form -> AX bool_form .) ]
+  ! OR              [ reduce using rule 4 (bool_form -> AX bool_form .) ]
+  ! AU              [ shift and go to state 9 ]
+  ! EU              [ shift and go to state 10 ]
+
+
+state 13
+
+    (5) bool_form -> EX bool_form .
+    (2) bool_form -> bool_form . AND bool_form
+    (3) bool_form -> bool_form . OR bool_form
+    (6) bool_form -> bool_form . AU bool_form
+    (7) bool_form -> bool_form . EU bool_form
+
+    AU              reduce using rule 5 (bool_form -> EX bool_form .)
+    EU              reduce using rule 5 (bool_form -> EX bool_form .)
+    $end            reduce using rule 5 (bool_form -> EX bool_form .)
+    RPAREN          reduce using rule 5 (bool_form -> EX bool_form .)
+    AND             shift and go to state 7
+    OR              shift and go to state 8
+
+  ! AND             [ reduce using rule 5 (bool_form -> EX bool_form .) ]
+  ! OR              [ reduce using rule 5 (bool_form -> EX bool_form .) ]
+  ! AU              [ shift and go to state 9 ]
+  ! EU              [ shift and go to state 10 ]
+
+
+state 14
+
+    (8) bool_form -> LPAREN bool_form . RPAREN
+    (2) bool_form -> bool_form . AND bool_form
+    (3) bool_form -> bool_form . OR bool_form
+    (6) bool_form -> bool_form . AU bool_form
+    (7) bool_form -> bool_form . EU bool_form
+
+    RPAREN          shift and go to state 19
+    AND             shift and go to state 7
+    OR              shift and go to state 8
+    AU              shift and go to state 9
+    EU              shift and go to state 10
+
+
+state 15
+
+    (2) bool_form -> bool_form AND bool_form .
+    (2) bool_form -> bool_form . AND bool_form
+    (3) bool_form -> bool_form . OR bool_form
+    (6) bool_form -> bool_form . AU bool_form
+    (7) bool_form -> bool_form . EU bool_form
+
+    AND             reduce using rule 2 (bool_form -> bool_form AND bool_form .)
+    OR              reduce using rule 2 (bool_form -> bool_form AND bool_form .)
+    AU              reduce using rule 2 (bool_form -> bool_form AND bool_form .)
+    EU              reduce using rule 2 (bool_form -> bool_form AND bool_form .)
+    $end            reduce using rule 2 (bool_form -> bool_form AND bool_form .)
+    RPAREN          reduce using rule 2 (bool_form -> bool_form AND bool_form .)
+
+  ! AND             [ shift and go to state 7 ]
+  ! OR              [ shift and go to state 8 ]
+  ! AU              [ shift and go to state 9 ]
+  ! EU              [ shift and go to state 10 ]
+
+
+state 16
+
+    (3) bool_form -> bool_form OR bool_form .
+    (2) bool_form -> bool_form . AND bool_form
+    (3) bool_form -> bool_form . OR bool_form
+    (6) bool_form -> bool_form . AU bool_form
+    (7) bool_form -> bool_form . EU bool_form
+
+    AND             reduce using rule 3 (bool_form -> bool_form OR bool_form .)
+    OR              reduce using rule 3 (bool_form -> bool_form OR bool_form .)
+    AU              reduce using rule 3 (bool_form -> bool_form OR bool_form .)
+    EU              reduce using rule 3 (bool_form -> bool_form OR bool_form .)
+    $end            reduce using rule 3 (bool_form -> bool_form OR bool_form .)
+    RPAREN          reduce using rule 3 (bool_form -> bool_form OR bool_form .)
+
+  ! AND             [ shift and go to state 7 ]
+  ! OR              [ shift and go to state 8 ]
+  ! AU              [ shift and go to state 9 ]
+  ! EU              [ shift and go to state 10 ]
+
+
+state 17
+
+    (6) bool_form -> bool_form AU bool_form .
+    (2) bool_form -> bool_form . AND bool_form
+    (3) bool_form -> bool_form . OR bool_form
+    (6) bool_form -> bool_form . AU bool_form
+    (7) bool_form -> bool_form . EU bool_form
+
+    AU              reduce using rule 6 (bool_form -> bool_form AU bool_form .)
+    EU              reduce using rule 6 (bool_form -> bool_form AU bool_form .)
+    $end            reduce using rule 6 (bool_form -> bool_form AU bool_form .)
+    RPAREN          reduce using rule 6 (bool_form -> bool_form AU bool_form .)
+    AND             shift and go to state 7
+    OR              shift and go to state 8
+
+  ! AND             [ reduce using rule 6 (bool_form -> bool_form AU bool_form .) ]
+  ! OR              [ reduce using rule 6 (bool_form -> bool_form AU bool_form .) ]
+  ! AU              [ shift and go to state 9 ]
+  ! EU              [ shift and go to state 10 ]
+
+
+state 18
+
+    (7) bool_form -> bool_form EU bool_form .
+    (2) bool_form -> bool_form . AND bool_form
+    (3) bool_form -> bool_form . OR bool_form
+    (6) bool_form -> bool_form . AU bool_form
+    (7) bool_form -> bool_form . EU bool_form
+
+    AU              reduce using rule 7 (bool_form -> bool_form EU bool_form .)
+    EU              reduce using rule 7 (bool_form -> bool_form EU bool_form .)
+    $end            reduce using rule 7 (bool_form -> bool_form EU bool_form .)
+    RPAREN          reduce using rule 7 (bool_form -> bool_form EU bool_form .)
+    AND             shift and go to state 7
+    OR              shift and go to state 8
+
+  ! AND             [ reduce using rule 7 (bool_form -> bool_form EU bool_form .) ]
+  ! OR              [ reduce using rule 7 (bool_form -> bool_form EU bool_form .) ]
+  ! AU              [ shift and go to state 9 ]
+  ! EU              [ shift and go to state 10 ]
+
+
+state 19
+
+    (8) bool_form -> LPAREN bool_form RPAREN .
+
+    AND             reduce using rule 8 (bool_form -> LPAREN bool_form RPAREN .)
+    OR              reduce using rule 8 (bool_form -> LPAREN bool_form RPAREN .)
+    AU              reduce using rule 8 (bool_form -> LPAREN bool_form RPAREN .)
+    EU              reduce using rule 8 (bool_form -> LPAREN bool_form RPAREN .)
+    $end            reduce using rule 8 (bool_form -> LPAREN bool_form RPAREN .)
+    RPAREN          reduce using rule 8 (bool_form -> LPAREN bool_form RPAREN .)
+

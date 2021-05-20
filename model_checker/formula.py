@@ -3,16 +3,20 @@ class Proposition:
         self._proposition = chr
         self._isatomic = atom
 
+    def __repr__(self):
+        return self._proposition
+
 class BooleanFormula:
     def getNot(bf):
-        p = Proposition("¬" + bf._proposition, False)
+        p = Proposition("!" + bf._proposition, False)
+        return p
 
     def getAnd(bf1, bf2):
-        p = Proposition(bf1._proposition + " ∧ " + bf2._proposition, False)
+        p = Proposition(bf1._proposition + " /\ " + bf2._proposition, False)
         return p
 
     def getOr(bf1, bf2):
-        p = Proposition(bf1._proposition + " ∨ " + bf2._proposition, False)
+        p = Proposition(bf1._proposition + " \/ " + bf2._proposition, False)
         return p
 
     def getAX(bf):
