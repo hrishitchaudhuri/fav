@@ -6,6 +6,11 @@ class Proposition:
     def __repr__(self):
         return self._proposition
 
+    def __eq__(p1, p2):
+        if p1._proposition == p2._proposition and p1._isatomic == p2._isatomic:
+            return True
+        return False
+
 class BooleanFormula:
     def getNot(bf):
         p = Proposition("!" + bf._proposition, False)

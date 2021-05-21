@@ -1,11 +1,12 @@
 import formula
 
 class KripkeStructure:
-    def __init__(self, S, IID, R, L):
+    def __init__(self, S, IID, R, L, P):
         self._states = S
         self._init = IID
         self._nsr = R
         self._labelling = L
+        self._proposition = P
 
     def __repr__(self):
         ret_str = ""
