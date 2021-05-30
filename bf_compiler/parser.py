@@ -8,7 +8,6 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../model_checker')))
 
 import formula
-import kripke
 from main import TestStructureK
 
 precedence = (
