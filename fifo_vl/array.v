@@ -20,3 +20,25 @@ module ptr_reg (input wire clk, reset, inc, output wire [2:0] cur_adr, output wi
     dfr df_1(clk, reset, q_in1, cur_adr[1]);
     dfr df_2(clk, reset, q_in2, cur_adr[2]);
 endmodule
+
+module register_file(input wire [2:0] din, input wire clk, reset, input wire [7:0] load, output wire [2:0] dout);
+    array_slice as0(din, clk, reset, load[0], dout);
+    array_slice as1(din, clk, reset, load[1], dout);
+    array_slice as2(din, clk, reset, load[2], dout);
+    array_slice as3(din, clk, reset, load[3], dout);
+    array_slice as4(din, clk, reset, load[4], dout);
+    array_slice as5(din, clk, reset, load[5], dout);
+    array_slice as6(din, clk, reset, load[6], dout);
+    array_slice as7(din, clk, reset, load[7], dout);
+endmodule
+
+module queue (input wire [2:0] din, input wire clk, reset, wr_signal, rd_signal, output wire [2:0] dout, output wire empty, full);
+    wire [7:0] load;
+    wire [2:0] wr_addr;
+    wire inc, cout;
+
+    ptr_reg wr_reg(clk, reset, wr_signal, wr_addr, cout)
+
+    demux8 dm0(wr_signal, wr_addr[0], wr_addr[1], wr_addr[2], load);
+    register_file rf(din, clk, reset, load, dout);
+endmodule

@@ -143,3 +143,6 @@ ply-3.11/
 # Verilog executables
 *.vcd
 *.out
+
+# Pluspy
+PlusPy/
