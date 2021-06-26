@@ -66,10 +66,10 @@ Spec == Init /\ [][Next]_<<switch_up, on_first, on_ground, lift_up, on_floor, li
 
 -----------------------------------------------------------------------------
 
-THEOREM Spec => \/ (on_ground = 1 /\ lift_up = 0 /\ on_first = 0 /\ lift_down = 0)
-                \/ (on_ground = 0 /\ lift_up = 1 /\ on_first = 0 /\ lift_down = 0)
-                \/ (on_ground = 0 /\ lift_up = 0 /\ on_first = 1 /\ lift_down = 0)
-                \/ (on_ground = 0 /\ lift_up = 0 /\ on_first = 0 /\ lift_down = 1)
+THEOREM Spec => \/ (on_ground = 1 /\ lift_up = 1 /\ on_first = 0 /\ lift_down = 0)
+                \/ (on_ground = 0 /\ lift_up = 1 /\ on_first = 1 /\ lift_down = 0)
+                \/ (on_ground = 0 /\ lift_up = 0 /\ on_first = 1 /\ lift_down = 1)
+                \/ (on_ground = 1 /\ lift_up = 0 /\ on_first = 0 /\ lift_down = 1)
 
 
 =============================================================================

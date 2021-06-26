@@ -31,4 +31,4 @@ L.addLabel(s1, q)
 L.addLabel(s2, q)
 L.addLabel(s3, p)
 
-TestStructureK = kripke.KripkeStructure(S, s1, R, L, P)
+TestStructureK = kripke.KripkeStructure(S, [s1], R, L)
