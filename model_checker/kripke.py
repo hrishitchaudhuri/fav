@@ -19,8 +19,11 @@ class KripkeStructure:
                 for rel in self._nsr._relations[state]:
                     ret_str += str(rel.getID()) + " "
         
-                ret_str += "\n\tLabels: {"
+            except KeyError:
+                ret_str += "NONE"
 
+            try:
+                ret_str += "\n\tLabels: {"
                 for label in self._labelling._labels[state]:
                     if label == self._labelling._labels[state][-1]:
                         ret_str += label._proposition
@@ -29,7 +32,7 @@ class KripkeStructure:
                 ret_str += "}\n"
             
             except KeyError:
-                ret_str += "NONE\n"
+                ret_str += "\n"
 
             
             

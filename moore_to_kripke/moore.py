@@ -64,7 +64,7 @@ class Moore:
                 inpstr = Proposition(kStates[i]._mstateset[0], True)
 
                 for j in range(1, len(kStates[i]._mstateset)):
-                    inpstr = BooleanFormula.getOr(Proposition(kStates[i]._mstateset[j], True), inpstr)
+                    inpstr = BooleanFormula.getAnd(Proposition(kStates[i]._mstateset[j], True), inpstr)
 
             if inpstr:
                 L.addLabel(kStates[i], BooleanFormula.getOr(Proposition(self.state_output[kStates[i]._mstate], True), inpstr))
