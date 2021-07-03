@@ -1,0 +1,54 @@
+strict digraph DiskGraph {
+nodesep=0.35;
+subgraph cluster_graph {
+color="white";
+-6599618978659618877 [label="P = <<FALSE, FALSE, FALSE, FALSE>>",style = filled]
+-6599618978659618877 -> 8849156507924624397 [label="",color="black",fontcolor="black"];
+8849156507924624397 [label="P = <<TRUE, FALSE, FALSE, FALSE>>"];
+8849156507924624397 -> 4589436344254401060 [label="",color="black",fontcolor="black"];
+4589436344254401060 [label="P = <<FALSE, TRUE, FALSE, FALSE>>"];
+4589436344254401060 -> -2227309846440259094 [label="",color="black",fontcolor="black"];
+-2227309846440259094 [label="P = <<TRUE, TRUE, FALSE, FALSE>>"];
+-2227309846440259094 -> 6765113731627994255 [label="",color="black",fontcolor="black"];
+6765113731627994255 [label="P = <<FALSE, FALSE, TRUE, FALSE>>"];
+6765113731627994255 -> -8987647273601984703 [label="",color="black",fontcolor="black"];
+-8987647273601984703 [label="P = <<TRUE, FALSE, TRUE, FALSE>>"];
+-8987647273601984703 -> -4162726198514685592 [label="",color="black",fontcolor="black"];
+-4162726198514685592 [label="P = <<FALSE, TRUE, TRUE, FALSE>>"];
+-4162726198514685592 -> 1773560526822847142 [label="",color="black",fontcolor="black"];
+1773560526822847142 [label="P = <<TRUE, TRUE, TRUE, FALSE>>"];
+1773560526822847142 -> 7529880926606287859 [label="",color="black",fontcolor="black"];
+7529880926606287859 [label="P = <<FALSE, FALSE, FALSE, TRUE>>"];
+7529880926606287859 -> -5271331722621568963 [label="",color="black",fontcolor="black"];
+-5271331722621568963 [label="P = <<TRUE, FALSE, FALSE, TRUE>>"];
+-5271331722621568963 -> -890015880844982764 [label="",color="black",fontcolor="black"];
+-890015880844982764 [label="P = <<FALSE, TRUE, FALSE, TRUE>>"];
+-890015880844982764 -> 3243139500116319706 [label="",color="black",fontcolor="black"];
+3243139500116319706 [label="P = <<TRUE, TRUE, FALSE, TRUE>>"];
+3243139500116319706 -> -7929589524566933313 [label="",color="black",fontcolor="black"];
+-7929589524566933313 [label="P = <<FALSE, FALSE, TRUE, TRUE>>"];
+-7929589524566933313 -> 5716058740809554801 [label="",color="black",fontcolor="black"];
+5716058740809554801 [label="P = <<TRUE, FALSE, TRUE, TRUE>>"];
+5716058740809554801 -> 733512640832972120 [label="",color="black",fontcolor="black"];
+733512640832972120 [label="P = <<FALSE, TRUE, TRUE, TRUE>>"];
+733512640832972120 -> -3131689866784113002 [label="",color="black",fontcolor="black"];
+-3131689866784113002 [label="P = <<TRUE, TRUE, TRUE, TRUE>>"];
+-3131689866784113002 -> -6599618978659618877 [label="",color="black",fontcolor="black"];
+{rank = same; -6599618978659618877;}
+{rank = same; 8849156507924624397;}
+{rank = same; 4589436344254401060;}
+{rank = same; -2227309846440259094;}
+{rank = same; 6765113731627994255;}
+{rank = same; -8987647273601984703;}
+{rank = same; -4162726198514685592;}
+{rank = same; 1773560526822847142;}
+{rank = same; 7529880926606287859;}
+{rank = same; -5271331722621568963;}
+{rank = same; -890015880844982764;}
+{rank = same; 3243139500116319706;}
+{rank = same; -7929589524566933313;}
+{rank = same; 5716058740809554801;}
+{rank = same; 733512640832972120;}
+{rank = same; -3131689866784113002;}
+}
+}
