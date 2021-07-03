@@ -2,53 +2,53 @@ strict digraph DiskGraph {
 nodesep=0.35;
 subgraph cluster_graph {
 color="white";
--8503561664754489425 [label="P = <<FALSE, FALSE, FALSE, FALSE>>",style = filled]
--8503561664754489425 -> -461512984708466047 [label="",color="black",fontcolor="black"];
--461512984708466047 [label="P = <<TRUE, FALSE, FALSE, FALSE>>"];
--461512984708466047 -> 6438225443386395751 [label="",color="black",fontcolor="black"];
-6438225443386395751 [label="P = <<FALSE, TRUE, FALSE, FALSE>>"];
-6438225443386395751 -> 2971263286424162633 [label="",color="black",fontcolor="black"];
-2971263286424162633 [label="P = <<TRUE, TRUE, FALSE, FALSE>>"];
-2971263286424162633 -> 7463618940306861409 [label="",color="black",fontcolor="black"];
-7463618940306861409 [label="P = <<FALSE, FALSE, TRUE, FALSE>>"];
-7463618940306861409 -> 1725228556764278863 [label="",color="black",fontcolor="black"];
-1725228556764278863 [label="P = <<TRUE, FALSE, TRUE, FALSE>>"];
-1725228556764278863 -> -5246564149435152727 [label="",color="black",fontcolor="black"];
--5246564149435152727 [label="P = <<FALSE, TRUE, TRUE, FALSE>>"];
--5246564149435152727 -> -4083266852257850489 [label="",color="black",fontcolor="black"];
--4083266852257850489 [label="P = <<TRUE, TRUE, TRUE, FALSE>>"];
--4083266852257850489 -> -6427032355997760397 [label="",color="black",fontcolor="black"];
--6427032355997760397 [label="P = <<FALSE, FALSE, FALSE, TRUE>>"];
--6427032355997760397 -> -2978075874448205475 [label="",color="black",fontcolor="black"];
--2978075874448205475 [label="P = <<TRUE, FALSE, FALSE, TRUE>>"];
--2978075874448205475 -> 8532901042714554299 [label="",color="black",fontcolor="black"];
-8532901042714554299 [label="P = <<FALSE, TRUE, FALSE, TRUE>>"];
-8532901042714554299 -> 436800306640777877 [label="",color="black",fontcolor="black"];
-436800306640777877 [label="P = <<TRUE, TRUE, FALSE, TRUE>>"];
-436800306640777877 -> 5235371096357473981 [label="",color="black",fontcolor="black"];
-5235371096357473981 [label="P = <<FALSE, FALSE, TRUE, TRUE>>"];
-5235371096357473981 -> 4090079474558260115 [label="",color="black",fontcolor="black"];
-4090079474558260115 [label="P = <<TRUE, FALSE, TRUE, TRUE>>"];
-4090079474558260115 -> -7492958352541194891 [label="",color="black",fontcolor="black"];
--7492958352541194891 [label="P = <<FALSE, TRUE, TRUE, TRUE>>"];
--7492958352541194891 -> -1700515913005451173 [label="",color="black",fontcolor="black"];
--1700515913005451173 [label="P = <<TRUE, TRUE, TRUE, TRUE>>"];
--1700515913005451173 -> -8503561664754489425 [label="",color="black",fontcolor="black"];
-{rank = same; -8503561664754489425;}
-{rank = same; -461512984708466047;}
-{rank = same; 6438225443386395751;}
-{rank = same; 2971263286424162633;}
-{rank = same; 7463618940306861409;}
-{rank = same; 1725228556764278863;}
-{rank = same; -5246564149435152727;}
-{rank = same; -4083266852257850489;}
-{rank = same; -6427032355997760397;}
-{rank = same; -2978075874448205475;}
-{rank = same; 8532901042714554299;}
-{rank = same; 436800306640777877;}
-{rank = same; 5235371096357473981;}
-{rank = same; 4090079474558260115;}
-{rank = same; -7492958352541194891;}
-{rank = same; -1700515913005451173;}
+4651088050675356879 [label="P = <<FALSE, FALSE, FALSE, FALSE>>",style = filled]
+4651088050675356879 -> -4648488210768856889 [label="",color="black",fontcolor="black"];
+-4648488210768856889 [label="P = <<TRUE, FALSE, FALSE, FALSE>>"];
+-4648488210768856889 -> 6240392722749437765 [label="",color="black",fontcolor="black"];
+6240392722749437765 [label="P = <<FALSE, TRUE, FALSE, FALSE>>"];
+6240392722749437765 -> -6238348089107686579 [label="",color="black",fontcolor="black"];
+-6238348089107686579 [label="P = <<TRUE, TRUE, FALSE, FALSE>>"];
+-6238348089107686579 -> 3784934508993084606 [label="",color="black",fontcolor="black"];
+3784934508993084606 [label="P = <<FALSE, FALSE, TRUE, FALSE>>"];
+3784934508993084606 -> -3787401355162808138 [label="",color="black",fontcolor="black"];
+-3787401355162808138 [label="P = <<TRUE, FALSE, TRUE, FALSE>>"];
+-3787401355162808138 -> 2492573134043897652 [label="",color="black",fontcolor="black"];
+2492573134043897652 [label="P = <<FALSE, TRUE, TRUE, FALSE>>"];
+2492573134043897652 -> -2494469286311480516 [label="",color="black",fontcolor="black"];
+-2494469286311480516 [label="P = <<TRUE, TRUE, TRUE, FALSE>>"];
+-2494469286311480516 -> -7728302888752284841 [label="",color="black",fontcolor="black"];
+-7728302888752284841 [label="P = <<FALSE, FALSE, FALSE, TRUE>>"];
+-7728302888752284841 -> 7730769683449452383 [label="",color="black",fontcolor="black"];
+7730769683449452383 [label="P = <<TRUE, FALSE, FALSE, TRUE>>"];
+7730769683449452383 -> -9030242171924293411 [label="",color="black",fontcolor="black"];
+-9030242171924293411 [label="P = <<FALSE, TRUE, FALSE, TRUE>>"];
+-9030242171924293411 -> 9032138375798535381 [label="",color="black",fontcolor="black"];
+9032138375798535381 [label="P = <<TRUE, TRUE, FALSE, TRUE>>"];
+9032138375798535381 -> -2255530004014394586 [label="",color="black",fontcolor="black"];
+-2255530004014394586 [label="P = <<FALSE, FALSE, TRUE, TRUE>>"];
+-2255530004014394586 -> 2252930112635469614 [label="",color="black",fontcolor="black"];
+2252930112635469614 [label="P = <<TRUE, FALSE, TRUE, TRUE>>"];
+2252930112635469614 -> -674677344224104276 [label="",color="black",fontcolor="black"];
+-674677344224104276 [label="P = <<FALSE, TRUE, TRUE, TRUE>>"];
+-674677344224104276 -> 672632762189143204 [label="",color="black",fontcolor="black"];
+672632762189143204 [label="P = <<TRUE, TRUE, TRUE, TRUE>>"];
+672632762189143204 -> 4651088050675356879 [label="",color="black",fontcolor="black"];
+{rank = same; 4651088050675356879;}
+{rank = same; -4648488210768856889;}
+{rank = same; 6240392722749437765;}
+{rank = same; -6238348089107686579;}
+{rank = same; 3784934508993084606;}
+{rank = same; -3787401355162808138;}
+{rank = same; 2492573134043897652;}
+{rank = same; -2494469286311480516;}
+{rank = same; -7728302888752284841;}
+{rank = same; 7730769683449452383;}
+{rank = same; -9030242171924293411;}
+{rank = same; 9032138375798535381;}
+{rank = same; -2255530004014394586;}
+{rank = same; 2252930112635469614;}
+{rank = same; -674677344224104276;}
+{rank = same; 672632762189143204;}
 }
 }
